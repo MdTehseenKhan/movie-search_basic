@@ -1,0 +1,132 @@
+/*
+.app {
+    h1 (Site Title)
+
+    form.search {
+        input {}
+        button {
+            img (Search Icon)
+        }
+    }
+
+    .container {
+        .movie {
+            div {
+                p (Movie Year)
+            }
+            div {
+                img (Movie Poster)
+            }
+            div {
+                span (Movie Type)
+                h3 (Movie Title)
+            }
+        }
+
+        .empty {
+            h2
+        }
+    }
+}
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
+
+:root {
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-raleway: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    background: #0F2027;
+    background: linear-gradient(135deg , #2C5364, #203A43, #0F2027);
+
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-open-sans);
+}
+
+.app > h1 {
+    font-family: var(--font-raleway);
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.app > .search {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    border-radius: 30px;
+}
+.app > .search > input {
+    font-size: large;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+}
+.app > .search > input:focus {
+    outline: none;
+}
+.app > .search > button {
+    background: #0F2027;
+    border-radius: 0 30px 30px 0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+.app > .search > button:hover {
+    background: #09151a;
+}
+
+.app > .search > button img {
+    width: 30px;
+}
+
+.app .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.app .container .movie {
+    margin: 20px;
+    padding: 10px;
+    background: #212121;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0008;
+    transition: .5s;
+}
+.app .container .movie:hover {
+    box-shadow: 0 0 20px #0009;
+}
+.app .container .movie div:nth-child(1) {
+    padding-bottom: 10px;
+    text-align: center;
+}
+.app .container .movie div:nth-child(3) {
+    padding: 10px;
+    padding-bottom: 20px;
+    width: 300px;
+    border-radius: 30px;
+}
+.app .container .movie div:nth-child(3) span {
+    padding-bottom: 5px;
+}
+
+.app .empty {
+    font-size: 3rem;
+}
